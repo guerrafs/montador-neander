@@ -53,7 +53,7 @@ void converteParaHexadecimal(const char *instrucao, const char *parametro, char 
         sprintf(hexadecimal, "F0 00 00 00");
     }
 }
-// analisar linha 95-112, ver como simplificar
+
 int main()
 {
     FILE *arquivoEntrada, *arquivoSaida; // Ponteiros para arquivos de entrada e saída
