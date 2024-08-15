@@ -7,7 +7,7 @@
 // Função que converte a instrução e seu parâmetro em uma representação hexadecimal
 void converteParaHexadecimal(const char *instrucao, const char *parametro, char *hexadecimal)
 {
-    // Compara a entrada com um conjunto de instruções e retorna a saída hexadecimal correspondente
+    // Compara a entrada com um conjunto de instruções e retorna a saída hexadecimal correspondent
     if (strcmp(instrucao, "NOP") == 0)
     {
         sprintf(hexadecimal, "00 00 00 00");
