@@ -67,7 +67,13 @@ int main()
     memset(memoria, 0, sizeof(memoria)); // Inicializa a memória com zeros
 
     // Abre o arquivo de entrada para leitura
-    arquivoEntrada = fopen("C:\\Users\\guerr\\Desktop\\Montador\\instrucoes.txt", "r");
+    arquivoEntrada = fopen("C:\\Users\\guerr\\Desktop\\montador\\montador-neander\\Montador\\instrucoes.txt", "r");
+
+    if (arquivoEntrada == NULL)
+    {
+        perror("Erro ao abrir o arquivo de entrada");
+        return 1;
+    }
 
     memoria[0] = 0x03;
     memoria[1] = 0x4E;
@@ -78,8 +84,8 @@ int main()
     // Lê o arquivo linha por linha
     while (fgets(linha, sizeof(linha), arquivoEntrada) && posicao < MEM_SIZE)
     {
-        //explicar melhor esse trecho
-        linha[strcspn(linha, "\n")] = '\0';           // Remove nova linha
+        // explicar melhor esse trecho
+        linha[strcspn(linha, "\n")] = '\0';           // Remove o caractere de nova linha do 'fgets'
         parametro[0] = '\0';                          // Inicializa  o parâmetro como uma string vazia
         sscanf(linha, "%s %s", instrucao, parametro); // Lê a instrução e o parâmetro da linha
 
@@ -91,9 +97,9 @@ int main()
         sscanf(hexadecimal, "%x %x %x %x", &byte1, &byte2, &byte3, &byte4);
 
         // Armazena os bytes na memória
-        if (posicao + 4 <= MEM_SIZE) // Verifica se há espaço para 4 bytes
+        if (posicao + 4 <= MEM_SIZE) //verifica se há 4 espaços para bytes
         {
-            memoria[posicao++] = (unsigned char)byte1; //unsigned char para valores entre 0-255 
+            memoria[posicao++] = (unsigned char)byte1; //unsigned para valores até 255
             memoria[posicao++] = (unsigned char)byte2;
             memoria[posicao++] = (unsigned char)byte3;
             memoria[posicao++] = (unsigned char)byte4;
