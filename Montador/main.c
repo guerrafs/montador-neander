@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <string.h>
 
+// Na linha 72, modifique o caminho do arquivo 'instrucoes.txt' para corresponder ao diretório onde o seu arquivo está localizado.
+
 #define MEM_SIZE 516 // Tamanho total da memória em bytes 516 - 4 do cabeçalho padrão
 
 // Função que converte a instrução e seu parâmetro em uma representação hexadecimal
@@ -66,7 +68,7 @@ int main()
 
     memset(memoria, 0, sizeof(memoria)); // Inicializa a memória com zeros
 
-    // Abre o arquivo de entrada para leitura
+    // Modificar o caminho relativo ao seu arquivo
     arquivoEntrada = fopen("C:\\Users\\guerr\\Desktop\\montador\\montador-neander\\Montador\\instrucoes.txt", "r");
 
     if (arquivoEntrada == NULL)
