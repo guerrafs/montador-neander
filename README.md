@@ -12,6 +12,6 @@ Este projeto implementa um montador simples para o Neander, uma arquitetura de c
 
 ## Como usar?
 - **1:** Certifique-se que as instruções do Neander estão em um arquivo de texto (.txt) nomeado como "instrucoes.txt"
-- **2:** Modifique o caminho do arquivo de entrada no código, de forma que ele aponte para o diretório onde o arquivo está localizado.
+- **2:** Modifique o caminho do arquivo de entrada no código, de forma que ele aponte para o diretório onde o arquivo está localizado. Este arquivo foi feito usando windows, portanto modifique o caminho de acordo com isso.
 - **3:** O arquivo de saída sera gerado com o nome "saida.MEM" no mesmo diretório onde o programa é executado
 
