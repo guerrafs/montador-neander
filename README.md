@@ -9,3 +9,9 @@ Este projeto implementa um montador simples para o Neander, uma arquitetura de c
 - **Armazenamento na Memória**: Armazenamento das instruções convertidas na memória simulada do Neander.
 - **Criação de Arquivo Binário**: Geração de um arquivo binário `.MEM` contendo as instruções em formato hexadecimal, pronto para ser utilizado em emuladores de Neander.
 
+
+## Como usar?
+- **1** Certifique-se que as instruções do Neander estão em um arquivo de texto (.txt) nomeado como "instrucoes.txt"
+- **2** Modifique o caminho do arquivo de entrada no código, de forma que ele aponte para o diretório onde o arquivo está localizado.
+- **3** O arquivo de saída sera gerado com o nome "saida.MEM" no mesmo diretório onde o programa é executado
+
